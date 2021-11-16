@@ -1,5 +1,7 @@
 # OctoPrint-Klipper
 
+*I no longer use this image (using [Kiauh] instead) so this will be rarely updated.*
+
 My version of a Docker image for running [OctoPrint] and [Klipper] in a single container. Includes a few plugins I find useful.
 
 Big thanks to [sillyfrog](https://github.com/sillyfrog) for laying the groundwork for this image.
@@ -59,3 +61,4 @@ docker build -t seanauff/octoprint-klipper --no-cache -pull OctoPrint-Klipper
 
 [Octoprint]: https://github.com/foosel/OctoPrint
 [Klipper]: https://github.com/KevinOConnor/klipper
+[Kiauh]: https://github.com/th33xitus/kiauh
