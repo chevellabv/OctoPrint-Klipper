@@ -75,7 +75,9 @@ WORKDIR /home/octoprint
 
 RUN git clone https://github.com/KevinOConnor/klipper
 
-RUN ./klipper/scripts/install-ubuntu-18.04.sh
+COPY install-ubuntu-22.04.sh /home/octoprint/klipper/scripts/
+
+RUN ./klipper/scripts/install-ubuntu-22.04.sh
 
 USER root
 
