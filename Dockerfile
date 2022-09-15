@@ -33,6 +33,10 @@ USER octoprint
 
 #This fixes issues with the volume command setting wrong permissions
 RUN mkdir /home/octoprint/.octoprint
+USER root
+RUN chown -R octoprint:octopront /home/octoprint
+RUN chmod -R 755 /home/octoprint
+USER octoprint
 
 #Install Octoprint
 RUN git clone --branch $tag https://github.com/foosel/OctoPrint.git /opt/octoprint \
