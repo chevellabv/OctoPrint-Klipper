@@ -1,8 +1,10 @@
 name: Build ARM64 image
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
 jobs:
   push_to_registry:
     name: Push Docker image to GitHub Packages
