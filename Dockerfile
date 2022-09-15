@@ -40,17 +40,14 @@ RUN git clone --branch $tag https://github.com/foosel/OctoPrint.git /opt/octopri
 
 RUN /opt/octoprint/venv/bin/python -m pip install \
 https://github.com/AlexVerrico/Octoprint-Display-ETA/archive/master.zip \
-https://github.com/1r0b1n0/OctoPrint-Tempsgraph/archive/master.zip \
 https://github.com/tpmullan/OctoPrint-DetailedProgress/archive/master.zip \
 https://github.com/AliceGrey/OctoprintKlipperPlugin/archive/master.zip \
 https://github.com/jneilliii/OctoPrint-TabOrder/archive/master.zip \
-https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip \
 https://github.com/OctoPrint/OctoPrint-MQTT/archive/master.zip \
 https://github.com/birkbjo/OctoPrint-Themeify/archive/master.zip \
 https://github.com/jneilliii/OctoPrint-Python3PluginCompatibilityCheck/archive/master.zip \
 https://github.com/OllisGit/OctoPrint-PrintJobHistory/releases/latest/download/master.zip \
 https://github.com/marian42/octoprint-preheat/archive/master.zip \
-https://github.com/OllisGit/OctoPrint-FilamentManager/releases/latest/download/master.zip \
 https://github.com/OllisGit/OctoPrint-DisplayLayerProgress/releases/latest/download/master.zip \
 https://github.com/jneilliii/OctoPrint-UltimakerFormatPackage/archive/master.zip \
 https://github.com/jneilliii/OctoPrint-ConsolidateTempControl/archive/master.zip \
