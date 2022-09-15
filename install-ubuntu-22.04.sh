@@ -28,9 +28,6 @@ install_packages()
     # Install desired packages
     report_status "Installing packages..."
     sudo apt install --yes ${PKGLIST}
-    
-    report_status "Adding user to dialout group..."
-    sudo usermod -a -G dialout $KLIPPER_USER
 }
 
 # Step 2: Create python virtual environment
