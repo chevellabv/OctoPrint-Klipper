@@ -18,11 +18,12 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     tzdata \
     zlib1g-dev \
-    libjpeg-dev
+    libjpeg-dev \
+    ffmpeg
 
 EXPOSE 5000
 
-ARG tag=master
+ARG tag=devel
 
 WORKDIR /opt/octoprint
 
@@ -45,10 +46,9 @@ RUN git clone --branch $tag https://github.com/foosel/OctoPrint.git /opt/octopri
 
 RUN /opt/octoprint/venv/bin/python -m pip install \
 https://github.com/AliceGrey/OctoprintKlipperPlugin/archive/master.zip \
-https://github.com/OctoPrint/OctoPrint-MQTT/archive/master.zip \
 https://github.com/birkbjo/OctoPrint-Themeify/archive/master.zip \
-https://github.com/OllisGit/OctoPrint-DisplayLayerProgress/releases/latest/download/master.zip \
-https://github.com/jneilliii/OctoPrint-UltimakerFormatPackage/archive/master.zip
+https://github.com/jneilliii/OctoPrint-UltimakerFormatPackage/archive/master.zip \
+https://github.com/eyal0/OctoPrint-PrintTimeGenius/archive/master.zip
 
 VOLUME /home/octoprint/.octoprint
 
