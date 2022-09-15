@@ -75,8 +75,7 @@ WORKDIR /home/octoprint
 
 RUN git clone https://github.com/KevinOConnor/klipper
 
-COPY install-ubuntu-22.04.sh /home/octoprint/klipper/scripts/
-RUN chmod a+x ./klipper/scripts/install-ubuntu-22.04.sh
+COPY --chmod=0755 install-ubuntu-22.04.sh /home/octoprint/klipper/scripts/
 RUN ./klipper/scripts/install-ubuntu-22.04.sh
 
 USER root
