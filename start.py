@@ -21,7 +21,7 @@ OCTOPRINT = ["/opt/octoprint/venv/bin/octoprint", "serve"]
 def main():
     mjpg_processes = []
     mjpg_ports = [5000] # Reserve the OctoPrint port
-    for k, v in os.environ.iteritems():
+    for k, v in os.environ.items():
         if k.startswith("MJPG") and not k.startswith("MJPG_"):
             v = v.strip()
             port_env = "MJPG_PORT" + k[4:]
