@@ -108,4 +108,11 @@ RUN chmod a+x /usr/local/lib/mjpg-streamer/*
 COPY runstreamer.py /
 RUN chmod a+x /runstreamer.py
 
+RUN apt-get install -y \
+    libjpeg-dev \
+    libjpeg62-turbo \
+    libv4l-dev \
+    v4l-utils \
+    x265
+
 CMD ["/start.py"]
