@@ -97,7 +97,7 @@ COPY haproxy.cfg /etc/haproxy/
 
 RUN git clone https://github.com/jacksonliam/mjpg-streamer /mjpg
   
-WORKDIR /mjpg/mjpg-streamer-master/mjpg-streamer-experimental
+WORKDIR /mjpg/mjpg-streamer-experimental
 RUN make
 RUN make install
 
