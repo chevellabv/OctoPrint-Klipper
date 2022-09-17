@@ -89,30 +89,4 @@ RUN rm -f /bin/systemctl
 COPY start.py /
 COPY runklipper.py /
 
-#HAProxy
-
-COPY haproxy.cfg /etc/haproxy/
-
-#MJPG
-
-RUN git clone https://github.com/jacksonliam/mjpg-streamer /mjpg
-  
-WORKDIR /mjpg/mjpg-streamer-experimental
-RUN make
-RUN make install
-
-ENV CAMERA_DEV /dev/video0
-ENV MJPG_STREAMER_INPUT -n -r 1080x720
-
-RUN chmod a+x /usr/local/lib/mjpg-streamer/* 
-COPY runstreamer.py /
-RUN chmod a+x /runstreamer.py
-
-RUN apt-get install -y \
-    libjpeg-dev \
-    libjpeg-turbo8-dev \
-    libv4l-dev \
-    v4l-utils \
-    x265
-
 CMD ["/start.py"]
