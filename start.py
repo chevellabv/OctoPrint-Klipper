@@ -13,8 +13,8 @@ def main():
     klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runklipper.py'])
     mjpg_input = os.environ["MJPG_STREAMER_INPUT"]
     mjpg_device = os.environ["CAMERA_DEV"]
-    cmd = "/usr/local/bin/mjpg_streamer -i \"/usr/local/lib/mjpg-streamer/input_uvc.so {} -d {}\" -o \"/usr/local/lib/mjpg-streamer/output_http.so -w /usr/local/share/mjpg-streamer/www -p 8080\"".format(mjpg_input, mjpg_device)
-    klipper = subprocess.Popen(cmd.split(" "))
+    cmd = ["/usr/local/bin/mjpg_streamer","-i","\"/usr/local/lib/mjpg-streamer/input_uvc.so {} -d {}\"".format(mjpg_input, mjpg_device),"-o","\"/usr/local/lib/mjpg-streamer/output_http.so -w /usr/local/share/mjpg-streamer/www -p 8080\""]
+    klipper = subprocess.Popen(cmd)
     
     haproxy = subprocess.Popen(['/usr/sbin/haproxy','-f','/etc/haproxy/haproxy.cfg','-db'])
     
