@@ -17,12 +17,9 @@ RUN apt-get update && apt-get install -y \
     libffi-dev \
     build-essential \
     tzdata \
-    zlib1g-dev \
-    libjpeg-dev \
-    ffmpeg \
-    haproxy
+    zlib1g-dev
     
-EXPOSE 80
+EXPOSE 5000
 
 ARG tag=devel
 
