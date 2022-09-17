@@ -95,10 +95,7 @@ COPY haproxy.cfg /etc/haproxy/
 
 #MJPG
 
-RUN curl -fsSLO --compressed --retry 3 --retry-delay 10 \
-  https://github.com/jacksonliam/mjpg-streamer/archive/master.tar.gz \
-  && mkdir /mjpg \
-  && tar xzf master.tar.gz -C /mjpg
+RUN git clone https://github.com/jacksonliam/mjpg-streamer /mjpg
   
 WORKDIR /mjpg/mjpg-streamer-master/mjpg-streamer-experimental
 RUN make
