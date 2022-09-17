@@ -110,7 +110,7 @@ RUN chmod a+x /runstreamer.py
 
 RUN apt-get install -y \
     libjpeg-dev \
-    libjpeg62-turbo \
+    libjpeg-turbo8-dev \
     libv4l-dev \
     v4l-utils \
     x265
