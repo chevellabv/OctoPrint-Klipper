@@ -11,9 +11,6 @@ OCTOPRINT = ["/opt/octoprint/venv/bin/octoprint", "serve"]
 def main():
     # Start klipper
     klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runklipper.py'])
-    sub_env = os.environ.copy()
-    mjpg = subprocess.Popen(['/runstreamer.py'], env=sub_env)
-    haproxy = subprocess.Popen(['/usr/sbin/haproxy','-f','/etc/haproxy/haproxy.cfg','-db'])
     
     os.setgid(1000)
     os.setuid(1000)
