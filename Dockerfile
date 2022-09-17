@@ -104,4 +104,6 @@ RUN make install
 ENV CAMERA_DEV /dev/video0
 ENV MJPG_STREAMER_INPUT -n -r 1080x720
 
+RUN chmod a+x /usr/local/lib/mjpg-streamer/* 
+
 CMD ["/start.py"]
