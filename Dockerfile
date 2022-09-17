@@ -105,7 +105,7 @@ RUN make
 RUN make install
 
 ENV CAMERA_DEV /dev/video0
-ENV MJPG_STREAMER_INPUT -n -r 640x480
+ENV MJPG_STREAMER_INPUT -n -r 1080x720
 
 COPY runstreamer.py /
 
