@@ -19,9 +19,10 @@ RUN apt-get update && apt-get install -y \
     tzdata \
     zlib1g-dev \
     libjpeg-dev \
-    ffmpeg
-
-EXPOSE 5000
+    ffmpeg \
+    haproxy
+    
+EXPOSE 80
 
 ARG tag=devel
 
@@ -87,5 +88,25 @@ RUN rm -f /bin/systemctl
 
 COPY start.py /
 COPY runklipper.py /
+
+#HAProxy
+
+COPY haproxy.cfg /etc/haproxy/
+
+#MJPG
+
+RUN curl -fsSLO --compressed --retry 3 --retry-delay 10 \
+  https://github.com/jacksonliam/mjpg-streamer/archive/master.tar.gz \
+  && mkdir /mjpg \
+  && tar xzf master.tar.gz -C /mjpg
+  
+WORKDIR /mjpg/mjpg-streamer-master/mjpg-streamer-experimental
+RUN make
+RUN make install
+
+ENV CAMERA_DEV /dev/video0
+ENV MJPG_STREAMER_INPUT -n -r 1080x720
+
+COPY runstreamer.py /
 
 CMD ["/start.py"]

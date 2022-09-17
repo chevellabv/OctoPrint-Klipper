@@ -39,7 +39,8 @@ def main():
 
     # Start klipper
     klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runklipper.py'])
-
+    klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runstreamer.py'])
+    
     os.setgid(
         1000
     )  # Drop privileges, https://stackoverflow.com/questions/2699907/dropping-root-permissions-in-python#2699996
