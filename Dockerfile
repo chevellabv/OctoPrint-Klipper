@@ -105,5 +105,6 @@ ENV CAMERA_DEV /dev/video0
 ENV MJPG_STREAMER_INPUT -n -r 1080x720
 
 COPY runstreamer.py /
+RUN chmod a+x /runstreamer.py
 
 CMD ["/start.py"]
