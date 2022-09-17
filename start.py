@@ -40,6 +40,7 @@ def main():
     # Start klipper
     klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runklipper.py'])
     klipper = subprocess.Popen(['sudo', '-u', 'octoprint', '/runstreamer.py'])
+    klipper = subprocess.Popen(['/usr/sbin/haproxy','-f','/etc/haproxy/haproxy.cfg'])
     
     os.setgid(
         1000
