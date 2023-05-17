@@ -9,7 +9,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - "/home/docker/octoprint-klipper:/home/octoprint/.octoprint"
+      - "/mnt/usbstick/docker/octoprint-klipper:/home/octoprint/.octoprint"
     environment:
       TZ: America/New_York
     restart: unless-stopped
