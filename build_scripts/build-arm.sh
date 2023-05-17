@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-REPO=seanauff
+REPO=chevellabv
 IMAGE=octoprint-klipper
 TAG=arm
 
