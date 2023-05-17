@@ -12,5 +12,4 @@ services:
       - "/home/docker/octoprint-klipper:/home/octoprint/.octoprint"
     environment:
       TZ: America/New_York
-      ENABLE_MJPG_STREAMER: true
     restart: unless-stopped
