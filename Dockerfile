@@ -46,7 +46,17 @@ RUN /opt/octoprint/venv/bin/python -m pip install \
 https://github.com/AliceGrey/OctoprintKlipperPlugin/archive/master.zip \
 https://github.com/birkbjo/OctoPrint-Themeify/archive/master.zip \
 https://github.com/jneilliii/OctoPrint-UltimakerFormatPackage/archive/master.zip \
-https://github.com/eyal0/OctoPrint-PrintTimeGenius/archive/master.zip
+https://github.com/eyal0/OctoPrint-PrintTimeGenius/archive/master.zip \
+https://github.com/jneilliii/OctoPrint-BedLevelVisualizer/archive/master.zip \
+https://github.com/jneilliii/OctoPrint-BackupScheduler/archive/refs/heads/master.zip \
+https://github.com/RomainOdeval/OctoPrint-CrealityTemperature/archive/refs/heads/master.zip \
+https://github.com/j7126/OctoPrint-Dashboard/archive/refs/heads/master.zip \
+https://github.com/Salandora/OctoPrint-FileManager/archive/refs/heads/master.zip \
+https://github.com/Andy-ch/OctoPrint-HeaterTimeout/archive/refs/heads/master.zip \
+https://github.com/imrahil/OctoPrint-NavbarTemp/archive/refs/heads/devel.zip \
+https://github.com/FormerLurker/Octolapse/archive/refs/heads/master.zip \
+https://github.com/jneilliii/OctoPrint-TabOrder/archive/refs/heads/master.zip \
+https://github.com/BillyBlaze/OctoPrint-TouchUI/archive/refs/heads/master.zip
 
 VOLUME /home/octoprint/.octoprint
 
