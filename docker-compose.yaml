@@ -11,5 +11,5 @@ services:
     volumes:
       - "/mnt/usbstick/octoprint-klipper-volume:/home/octoprint/.octoprint"
     environment:
-      TZ: America/New_York
+      TZ: Europe/Amsterdam
     restart: unless-stopped
